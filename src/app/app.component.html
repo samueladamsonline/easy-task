@@ -6,16 +6,12 @@
     <!-- <app-user [name]="user.name" [avatar]="user.avatar" /> -->
     <!-- </li>> -->
     <li>
-      <app-user [id]="users[0].id" [name]="users[0].name" [avatar]="users[0].avatar" (select)="onUserSelect($event)" />
+      <app-user [id]="users[0].id" [name]="users[0].name" [avatar]="users[0].avatar" (select)="onSelectUser($event)" />
     </li>
     <li>
-      <app-user [id]="users[1].id" [name]="users[1].name" [avatar]="users[1].avatar" (select)="onUserSelect($event)" />
+      <app-user [id]="users[1].id" [name]="users[1].name" [avatar]="users[1].avatar" (select)="onSelectUser($event)" />
     </li>
   </ul>
 
-  <ol>
-    <li>
-      <p>{{ clickedUserId }}</p>
-    </li>
-  </ol>
+  <app-tasks [name]="selectedUser.name" />
 </main>
