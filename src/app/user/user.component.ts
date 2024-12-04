@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DUMMY_USERS } from '../dummer-users';
+import { Component, Input, input, computed, Output, output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -9,9 +8,24 @@ import { DUMMY_USERS } from '../dummer-users';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  selectedUser = DUMMY_USERS[Math.floor(Math.random() * DUMMY_USERS.length)];
+  // Examples of using signals.
+  // name = input.required<string>();
+  // avatar = input.required<string>();
+  // imagePath = computed(() => {
+  //   return "assets/users/" + this.avatar()
+  // });
+  // select = output<string>(); // This is not a signal but looks like it.
+
+  @Input({ required: true }) id!: string;
+  @Input({ required: true }) name!: string;
+  @Input({ required: true }) avatar!: string;
+  @Output() select = new EventEmitter<string>();
 
   get imagePath() {
-    return 'assets/users/' + this.selectedUser.avatar;
+    return "assets/users/" + this.avatar;
+  }
+
+  onSelectUser() {
+    this.select.emit(this.id);
   }
 }

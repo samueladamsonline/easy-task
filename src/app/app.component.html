@@ -2,8 +2,20 @@
 
 <main>
   <ul id="users">
+    <!-- <li *ngFor="let user of users"> -->
+    <!-- <app-user [name]="user.name" [avatar]="user.avatar" /> -->
+    <!-- </li>> -->
     <li>
-      <app-user />
+      <app-user [id]="users[0].id" [name]="users[0].name" [avatar]="users[0].avatar" (select)="onUserSelect($event)" />
+    </li>
+    <li>
+      <app-user [id]="users[1].id" [name]="users[1].name" [avatar]="users[1].avatar" (select)="onUserSelect($event)" />
     </li>
   </ul>
+
+  <ol>
+    <li>
+      <p>{{ clickedUserId }}</p>
+    </li>
+  </ol>
 </main>
