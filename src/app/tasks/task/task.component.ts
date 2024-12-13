@@ -8,5 +8,4 @@ import { Component, Input } from '@angular/core';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
-  @Input() description?: string;
 }

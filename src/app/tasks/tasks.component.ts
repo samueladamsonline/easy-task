@@ -1,12 +1,6 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { DUMMY_TASKS } from '../dummy-tasks';
-
-interface User {
-  id: string,
-  name: string,
-  avatar: string
-};
 
 @Component({
   selector: 'app-tasks',
@@ -16,9 +10,10 @@ interface User {
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  @Input() user?: User;
+  @Input({ required: true }) userName!: string;
+  @Input({ required: true }) userId!: string;
 
-  get tasks() {
-    return DUMMY_TASKS.filter(task => task.userName === this.user?.name)
+  get selectedUserTasks() {
+    return DUMMY_TASKS.filter(task => task.userId == this.userId);
   }
 }

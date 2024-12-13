@@ -1,6 +1,6 @@
 <section id="tasks">
   <header>
-    <h2>{{ user?.name }}'s Tasks</h2>
+    <h2>{{ userName }}'s Tasks</h2>
   </header>
   <menu>
     <button>Add Task</button>
@@ -9,8 +9,8 @@
 
 <ul>
   <li>
-    @for (task of tasks; track task.id) {
-      <app-task [description]="task.description"></app-task>
+    @for (task of selectedUserTasks; track task.id) {
+      <app-task />
     }
   </li>
 </ul>

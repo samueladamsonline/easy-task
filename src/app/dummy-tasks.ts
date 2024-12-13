@@ -1,62 +1,25 @@
 export const DUMMY_TASKS = [
   {
     id: 't1',
-    userName: 'Jasmine Washington',
-    description: 'Task 1'
+    userId: 'u1',
+    title: 'Master Angular',
+    summary:
+      'Learn all the basic and advanced features of Angular & how to apply them.',
+    dueDate: '2025-12-31',
   },
   {
     id: 't2',
-    userName: 'Jasmine Washington',
-    description: 'Task 2'
+    userId: 'u3',
+    title: 'Build first prototype',
+    summary: 'Build a first prototype of the online shop website',
+    dueDate: '2024-05-31',
   },
   {
     id: 't3',
-    userName: 'Emily Thompson',
-    description: 'Task 1'
+    userId: 'u3',
+    title: 'Prepare issue template',
+    summary:
+      'Prepare and describe an issue template which will help with project management',
+    dueDate: '2024-06-15',
   },
-  {
-    id: 't4',
-    userName: 'Emily Thompson',
-    description: 'Task 2'
-  },
-  {
-    id: 't5',
-    userName: 'Marcus Johnson',
-    description: 'Task 1'
-  },
-  {
-    id: 't6',
-    userName: 'Marcus Johnson',
-    description: 'Task 2'
-  },
-  {
-    id: 't7',
-    userName: 'David Miller',
-    description: 'Task 1'
-  },
-  {
-    id: 't8',
-    userName: 'David Miller',
-    description: 'Task 2'
-  },
-  {
-    id: 't9',
-    userName: 'Priya Patel',
-    description: 'Task 1'
-  },
-  {
-    id: 't10',
-    userName: 'Priya Patel',
-    description: 'Task 2'
-  },
-  {
-    id: 't11',
-    userName: 'Arjun Singh',
-    description: 'Task 1'
-  },
-  {
-    id: 't12',
-    userName: 'Arjun Singh',
-    description: 'Task 2'
-  }
 ];
