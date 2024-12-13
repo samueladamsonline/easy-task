@@ -8,4 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './task.component.css'
 })
 export class TaskComponent {
+  @Input({ required: true }) title!: string;
+  @Input({ required: true }) summary!: string;
+  @Input({ required: true }) dueDate!: string;
 }
