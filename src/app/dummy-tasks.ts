@@ -4,7 +4,7 @@ export const DUMMY_TASKS = [
     userId: 'u1',
     title: 'Master Angular',
     summary:
-      'Learn all the basic and advanced features of Angular & how to apply them.',
+      'Learn the basic and advanced features of Angular & how to apply them',
     dueDate: '2025-12-31',
   },
   {
